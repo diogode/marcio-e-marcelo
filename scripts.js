@@ -10,6 +10,17 @@ document.addEventListener('DOMContentLoaded', function(){
         document.body.style.fontSize = `${tamanhoDaFonte}rem`
     })
 
+    const botaoDiminuirFonte = document.getElementById('diminuir-fonte')
+    //Pega o botão de aumentar fonte e coloca na constante
+
+
+    botaoDiminuirFonte.addEventListener('click', function(){
+        tamanhoDaFonte = tamanhoDaFonte - 0.1
+        document.body.style.fontSize = `${tamanhoDaFonte}rem`
+    })
+
+})
+
     const botaoAcessibilidade = document.getElementById('botao-acessibilidade')
     const opcoesAcessibilidade = document.getElementById('opcoes-acessibilidade')
     
@@ -17,4 +28,9 @@ document.addEventListener('DOMContentLoaded', function(){
         botaoAcessibilidade.classList.toggle('rotacao-botao')
         opcoesAcessibilidade.classList.toggle('apresenta-lista')
     })
+    const alternaContraste = document.getElementById('alterna-contraste')
+    alternaContraste.addEventListener('click', function(){
+        document.body.classList.toggle('alto-contraste')
 })
+
+
